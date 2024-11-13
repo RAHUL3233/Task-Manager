@@ -22,7 +22,7 @@ function App() {
   const addOrUpdateTask = (task) => {
 
     setTasks((prevTasks) => {
-      const existingTaskIndex = prevTasks.findIndex((t) => {t.id === task.id});
+      const existingTaskIndex = prevTasks.findIndex(t => t.id === task.id);
       if (existingTaskIndex > -1) {
         const updatedTasks = [...prevTasks];
         updatedTasks[existingTaskIndex] = task;
@@ -36,7 +36,7 @@ function App() {
   };
 
   const deleteTask = (id) => {
-    setTasks(tasks.filter((task) => {task.id !== id}));
+    setTasks(tasks.filter(task => task.id !== id));
   };
 
   const toggleCompletion = (id) => {
