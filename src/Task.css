@@ -1,0 +1,219 @@
+
+/* Dashboard container */
+.dashboard {
+  width: 80%;
+  max-width: 1300px;  
+  background-color: #f0f4f7;  
+  padding: 30px 40px; 
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); 
+  margin: 20px auto; 
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main Title */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;  
+  font-size: 34px;
+  font-weight: bold;
+  color: #5b6c6e;  
+}
+
+/* Section Title for categories (Upcoming, Overdue, Completed) */
+h2 {
+  margin-top: 25px;
+  font-size: 26px;
+  color: #5c6bc0;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form Elements (inputs, selects, textarea) */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px; 
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #333;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #42a5f5; 
+}
+
+/* Button styling */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: rgb(142, 90, 16);
+  background-color: aquamarine;
+  margin: 5px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.edit {
+  background-color: #ffa726; 
+}
+
+button.delete {
+  background-color: #ef5350; 
+}
+
+button.complete {
+  background-color: #66bb6a; 
+}
+
+button.edit:hover {
+  background-color: #fb8c00;  
+}
+
+button.delete:hover {
+  background-color: #d32f2f; 
+}
+
+button.complete:hover {
+  background-color: #388e3c;  
+}
+
+/* Form container */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #5b6c6e;
+  font-weight: bold;
+}
+
+/* Task list container */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Task item container */
+.task {
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #5b6c6e; 
+  font-weight: 500;
+}
+
+.task p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Completed tasks should have a strikethrough and lighter color */
+.task.completed {
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+
+/* Filters and Search bar */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters select, .filters input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  width: 48%;
+  transition: all 0.3s ease;
+}
+
+.filters input:focus, .filters select:focus {
+  outline: none;
+  border-color: #42a5f5;
+}
+
+/* Section for task categories (Upcoming, Overdue, Completed) */
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-section h2 {
+  color: #5c6bc0; 
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .dashboard {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filters select,
+  .filters input {
+    width: 100%;
+  }
+}
